@@ -1,0 +1,122 @@
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+
+const techCategories = [
+  {
+    title: 'Languages',
+    items: [
+      { name: 'Python', icon: '🐍' },
+      { name: 'SQL', icon: '📊' },
+      { name: 'Java', icon: '☕' },
+      { name: 'Scala', icon: '🔴' },
+      { name: 'TypeScript', icon: '📘' },
+      { name: 'Bash', icon: '💻' },
+    ],
+  },
+  {
+    title: 'Big Data & Processing',
+    items: [
+      { name: 'Apache Spark', icon: '⚡' },
+      { name: 'Apache Kafka', icon: '📨' },
+      { name: 'Apache Airflow', icon: '🌀' },
+      { name: 'Hadoop', icon: '🐘' },
+      { name: 'Flink', icon: '🔗' },
+      { name: 'dbt', icon: '🔧' },
+    ],
+  },
+  {
+    title: 'Databases',
+    items: [
+      { name: 'PostgreSQL', icon: '🐘' },
+      { name: 'MongoDB', icon: '🍃' },
+      { name: 'Redis', icon: '🔴' },
+      { name: 'Snowflake', icon: '❄️' },
+      { name: 'BigQuery', icon: '📦' },
+      { name: 'Cassandra', icon: '👁️' },
+    ],
+  },
+  {
+    title: 'Cloud & DevOps',
+    items: [
+      { name: 'AWS', icon: '☁️' },
+      { name: 'GCP', icon: '🌐' },
+      { name: 'Docker', icon: '🐳' },
+      { name: 'Kubernetes', icon: '☸️' },
+      { name: 'Terraform', icon: '🏗️' },
+      { name: 'Git', icon: '📚' },
+    ],
+  },
+];
+
+const TechStack = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  return (
+    <section id="tech-stack" className="py-20 md:py-32 relative">
+      {/* Background Decoration */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/10 to-background" />
+
+      <div className="section-container relative">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block text-sm font-medium text-primary mb-4">
+            Technologies
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            My Tech <span className="gradient-text">Arsenal</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            A comprehensive toolkit for building robust data infrastructure 
+            and scalable analytics solutions.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {techCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+              className="glass-card p-6 md:p-8 rounded-2xl"
+            >
+              <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full" />
+                {category.title}
+              </h3>
+
+              <div className="grid grid-cols-3 gap-3">
+                {category.items.map((tech, techIndex) => (
+                  <motion.div
+                    key={tech.name}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{
+                      duration: 0.4,
+                      delay: categoryIndex * 0.1 + techIndex * 0.05,
+                    }}
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="tech-icon flex flex-col items-center justify-center text-center cursor-default"
+                  >
+                    <span className="text-2xl mb-2">{tech.icon}</span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      {tech.name}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TechStack;
