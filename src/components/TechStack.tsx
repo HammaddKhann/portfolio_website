@@ -4,47 +4,31 @@ import { useRef } from 'react';
 const techCategories = [
   {
     title: 'Languages',
-    items: [
-      { name: 'Python', icon: '🐍' },
-      { name: 'SQL', icon: '📊' },
-      { name: 'Java', icon: '☕' },
-      { name: 'Scala', icon: '🔴' },
-      { name: 'TypeScript', icon: '📘' },
-      { name: 'Bash', icon: '💻' },
-    ],
+    items: ['Python', 'Java', 'JavaScript', 'SQL', 'NoSQL'],
   },
   {
-    title: 'Big Data & Processing',
-    items: [
-      { name: 'Apache Spark', icon: '⚡' },
-      { name: 'Apache Kafka', icon: '📨' },
-      { name: 'Apache Airflow', icon: '🌀' },
-      { name: 'Hadoop', icon: '🐘' },
-      { name: 'Flink', icon: '🔗' },
-      { name: 'dbt', icon: '🔧' },
-    ],
+    title: 'Machine Learning & AI',
+    items: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'OpenCV', 'Tesseract'],
+  },
+  {
+    title: 'Data Processing',
+    items: ['Pandas', 'NumPy', 'Spark', 'Hadoop', 'Airflow'],
+  },
+  {
+    title: 'Web Development',
+    items: ['React', 'Next.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'FastAPI'],
+  },
+  {
+    title: 'MLOps & DevOps',
+    items: ['Docker', 'GitHub Actions', 'MLflow', 'Prometheus', 'Grafana', 'Git'],
   },
   {
     title: 'Databases',
-    items: [
-      { name: 'PostgreSQL', icon: '🐘' },
-      { name: 'MongoDB', icon: '🍃' },
-      { name: 'Redis', icon: '🔴' },
-      { name: 'Snowflake', icon: '❄️' },
-      { name: 'BigQuery', icon: '📦' },
-      { name: 'Cassandra', icon: '👁️' },
-    ],
+    items: ['MySQL', 'PostgreSQL', 'MongoDB', 'Oracle', 'Redis', 'FAISS', 'ChromaDB'],
   },
   {
-    title: 'Cloud & DevOps',
-    items: [
-      { name: 'AWS', icon: '☁️' },
-      { name: 'GCP', icon: '🌐' },
-      { name: 'Docker', icon: '🐳' },
-      { name: 'Kubernetes', icon: '☸️' },
-      { name: 'Terraform', icon: '🏗️' },
-      { name: 'Git', icon: '📚' },
-    ],
+    title: 'Tools & Platforms',
+    items: ['Jupyter', 'VS Code', 'Linux', 'AWS', 'Metabase'],
   },
 ];
 
@@ -72,43 +56,41 @@ const TechStack = () => {
             My Tech <span className="gradient-text">Arsenal</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A comprehensive toolkit for building robust data infrastructure 
-            and scalable analytics solutions.
+            A comprehensive toolkit for building intelligent systems,
+            scalable web applications, and ML-powered solutions.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {techCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="glass-card p-6 md:p-8 rounded-2xl"
+              className="glass-card p-6 rounded-2xl hover:border-primary/50 transition-colors"
             >
-              <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full" />
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full" />
                 {category.title}
               </h3>
 
-              <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-wrap gap-2">
                 {category.items.map((tech, techIndex) => (
-                  <motion.div
-                    key={tech.name}
+                  <motion.span
+                    key={tech}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{
-                      duration: 0.4,
+                      duration: 0.3,
                       delay: categoryIndex * 0.1 + techIndex * 0.05,
                     }}
-                    whileHover={{ scale: 1.05, y: -5 }}
-                    className="tech-icon flex flex-col items-center justify-center text-center cursor-default"
+                    className="px-3 py-1.5 text-sm font-medium bg-secondary/50 text-foreground 
+                               border border-border/50 rounded-lg hover:border-primary/50 
+                               hover:bg-secondary transition-all cursor-default"
                   >
-                    <span className="text-2xl mb-2">{tech.icon}</span>
-                    <span className="text-xs font-medium text-muted-foreground">
-                      {tech.name}
-                    </span>
-                  </motion.div>
+                    {tech}
+                  </motion.span>
                 ))}
               </div>
             </motion.div>

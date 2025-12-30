@@ -10,9 +10,9 @@ const Hero = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-hero-gradient opacity-50" />
-        
+
         {/* Grid Pattern */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
@@ -65,7 +65,7 @@ const Hero = () => {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
         >
           Hi, I'm{' '}
-          <span className="gradient-text">John Doe</span>
+          <span className="gradient-text">Muhammad Hammad Khan</span>
         </motion.h1>
 
         <motion.p
@@ -74,7 +74,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto"
         >
-          Data Engineer | Big Data Analytics | Real-Time Systems
+          AI & Data Science | Machine Learning | Natural Language Processing | Computer Vision | DevOps & MLOps | Web Developer
         </motion.p>
 
         <motion.p
@@ -83,8 +83,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-base md:text-lg text-muted-foreground/70 mb-10 max-w-2xl mx-auto"
         >
-          Building scalable data pipelines and transforming raw data into actionable insights.
-          Passionate about cloud architecture and distributed systems.
+          Exploring the frontiers of Artificial Intelligence, Machine Learning, and Data Science.
+          Passionate about NLP, Data Analytics, and building intelligent solutions that make a difference.
         </motion.p>
 
         <motion.div

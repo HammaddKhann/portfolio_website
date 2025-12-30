@@ -1,43 +1,37 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Trophy, Users, Mic, Heart, Code, Zap } from 'lucide-react';
+import { Trophy, Users, Award, Heart } from 'lucide-react';
 
 const activities = [
   {
-    icon: Trophy,
-    title: 'Hackathon Winner',
-    description: '1st Place at BigData Hackathon 2023 - Built real-time analytics solution',
-    color: 'text-yellow-500',
+    icon: Award,
+    title: 'Astera IT Workshop at NOWPDP',
+    description: 'Mentored students at an IT Workshop organized by Astera at NOWPDP, a non-profit organization empowering the differently-abled. Delivered session on AI, data analytics, Python, Power BI, and MS Excel for participants.',
+    color: 'text-blue-500',
   },
   {
     icon: Users,
-    title: 'Tech Community Lead',
-    description: 'Leading 500+ member Data Engineering community, organizing monthly meetups',
+    title: 'IBA Convocation - Head Volunteer',
+    description: 'Managed a team of 60 volunteers to coordinate logistics and hospitality for 3,000+ guests. Coordinated distribution of 1000+ souvenirs.',
     color: 'text-primary',
   },
   {
-    icon: Mic,
-    title: 'Conference Speaker',
-    description: 'Spoke at 5+ conferences including DataEngConf and Kafka Summit',
-    color: 'text-accent',
+    icon: Award,
+    title: 'IBA Arts & Photography Society',
+    description: 'Core Team, Scavenger Hunt Module. Designed puzzles for 3-day event with 1,200 participants. Won award for best module among 22 modules.',
+    color: 'text-yellow-500',
   },
   {
-    icon: Code,
-    title: 'Open Source Contributor',
-    description: 'Active contributor to Apache Airflow and dbt projects',
+    icon: Trophy,
+    title: 'Regular Football/Futsal Player',
+    description: 'Played for multiple teams across Karachi including Ittehad FC, RBKarachi, Black FC. Competed in regional tournaments and club matches.',
     color: 'text-green-500',
   },
   {
     icon: Heart,
-    title: 'Tech Mentor',
-    description: 'Mentoring aspiring data engineers through ADPList and internal programs',
-    color: 'text-red-500',
-  },
-  {
-    icon: Zap,
-    title: 'Technical Writer',
-    description: 'Published 20+ articles on data engineering best practices on Medium',
-    color: 'text-orange-500',
+    title: 'Teaching & Mentorship',
+    description: 'Former Associate Teacher at Alpha College. Mentored 1500+ students in Physics, providing academic guidance and problem-solving techniques.',
+    color: 'text-accent',
   },
 ];
 
@@ -56,18 +50,18 @@ const Extracurriculars = () => {
           className="text-center mb-16"
         >
           <span className="inline-block text-sm font-medium text-primary mb-4">
-            Beyond Work
+            Beyond Academics
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Leadership & <span className="gradient-text">Community</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Giving back to the community through mentorship, 
-            speaking, and open source contributions.
+            Active involvement in university events, sports, and community service,
+            demonstrating leadership and teamwork.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {activities.map((activity, index) => (
             <motion.div
               key={activity.title}

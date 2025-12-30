@@ -4,45 +4,23 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
   {
-    company: 'TechCorp Inc.',
-    role: 'Senior Data Engineer',
-    duration: 'Jan 2023 - Present',
+    company: 'Pakistan State Oil',
+    role: 'Procurement Department - Intern',
+    duration: 'July 2025 - Aug 2025',
     achievements: [
-      'Led migration of on-premise data warehouse to cloud (AWS), reducing costs by 40%',
-      'Architected real-time data platform processing 5M+ events/minute',
-      'Mentored team of 4 junior engineers, improving team velocity by 30%',
-      'Implemented data governance framework achieving 99.9% data quality SLA',
+      'Engineered a full-stack vendor library web application (React, Tailwind CSS, Node.js, Express.js) to centralize and manage data for 21,000+ vendors',
+      'Automated digitization of 1,000+ vendor records using OCR pipelines with Tesseract, pdfplumber, LayoutParser, PubLayNet, EAST model, OpenCV, and Pandas',
+      'Enhanced procurement operations by increasing vendor participation and supplier diversity, improving transparency and efficiency in the pre-tender stage',
     ],
   },
   {
-    company: 'DataFlow Solutions',
-    role: 'Data Engineer',
-    duration: 'Jun 2021 - Dec 2022',
+    company: 'Alpha Education Network — Alpha College',
+    role: 'Associate Teacher, Physics',
+    duration: 'Oct 2021 - June 2022',
     achievements: [
-      'Built ETL pipelines processing 2TB+ data daily using Spark and Airflow',
-      'Designed data models for analytics, reducing query times by 60%',
-      'Developed real-time fraud detection system with 95% accuracy',
-      'Optimized cloud infrastructure, cutting monthly costs by $50K',
-    ],
-  },
-  {
-    company: 'Analytics Startup',
-    role: 'Junior Data Engineer',
-    duration: 'Aug 2020 - May 2021',
-    achievements: [
-      'Created automated data pipelines for customer analytics dashboard',
-      'Implemented data quality checks reducing data incidents by 80%',
-      'Built internal data catalog improving data discoverability',
-    ],
-  },
-  {
-    company: 'University Research Lab',
-    role: 'Research Assistant (Data)',
-    duration: 'Jan 2019 - Jul 2020',
-    achievements: [
-      'Analyzed large-scale datasets for machine learning research projects',
-      'Published paper on efficient data preprocessing techniques',
-      'Developed visualization tools for complex data patterns',
+      'Conducted 20-30 tutorial sessions every week on Physics for AS and A2-Level students',
+      'Graded examination scripts for over 500 students and provided feedback and academic counselling',
+      'Mentored 1500+ students, providing academic guidance and problem-solving techniques',
     ],
   },
 ];
@@ -68,8 +46,8 @@ const Experience = () => {
             Work <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A track record of delivering impactful data solutions 
-            across diverse industries and scales.
+            Hands-on experience in software development, automation,
+            and education across diverse environments.
           </p>
         </motion.div>
 
@@ -84,16 +62,14 @@ const Experience = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className={`relative md:w-1/2 ${
-                  index % 2 === 0 ? 'md:pr-12 md:ml-0' : 'md:pl-12 md:ml-auto'
-                }`}
+                className={`relative md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:ml-0' : 'md:pl-12 md:ml-auto'
+                  }`}
               >
                 {/* Timeline Dot */}
-                <div 
+                <div
                   className={`hidden md:block absolute top-6 w-4 h-4 bg-primary rounded-full 
-                              border-4 border-background ${
-                    index % 2 === 0 ? '-right-2' : '-left-2'
-                  }`}
+                              border-4 border-background ${index % 2 === 0 ? '-right-2' : '-left-2'
+                    }`}
                 />
 
                 <div className="glass-card p-6 md:p-8 rounded-2xl hover:border-primary/50 transition-colors">

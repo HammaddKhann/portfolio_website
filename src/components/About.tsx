@@ -5,24 +5,24 @@ import { Code2, Database, Cloud, Lightbulb } from 'lucide-react';
 
 const highlights = [
   {
+    icon: Code2,
+    title: 'Machine Learning & AI',
+    description: 'PyTorch, TensorFlow, Scikit-learn & Computer Vision',
+  },
+  {
     icon: Database,
-    title: 'Data Engineering',
-    description: 'Building robust data pipelines and ETL processes',
+    title: 'Data Processing & Analytics',
+    description: 'Pandas, NumPy, Spark, Hadoop & Data Science',
   },
   {
     icon: Cloud,
-    title: 'Cloud Architecture',
-    description: 'Designing scalable solutions on AWS, GCP & Azure',
-  },
-  {
-    icon: Code2,
-    title: 'Real-Time Systems',
-    description: 'Streaming analytics with Kafka & Spark',
+    title: 'Web Development',
+    description: 'React, Next.js, Node.js & Full-Stack Applications',
   },
   {
     icon: Lightbulb,
-    title: 'Problem Solving',
-    description: 'Turning complex data challenges into solutions',
+    title: 'MLOps & DevOps',
+    description: 'Docker, CI/CD, MLflow & Cloud Deployment',
   },
 ];
 
@@ -56,11 +56,11 @@ const About = () => {
                   <div className="text-center p-8">
                     <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-accent p-1">
                       <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                        <span className="text-5xl font-bold gradient-text">JD</span>
+                        <span className="text-5xl font-bold gradient-text">MHK</span>
                       </div>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      4+ Years Experience
+                      CS Student @ IBA
                     </p>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ const About = () => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute -top-4 -right-4 glass-card px-4 py-2 rounded-xl"
               >
-                <p className="text-sm font-medium text-primary">50+ Projects</p>
+                <p className="text-sm font-medium text-primary">CGPA 3.73</p>
               </motion.div>
 
               <motion.div
@@ -80,7 +80,7 @@ const About = () => {
                 transition={{ duration: 4, repeat: Infinity, delay: 1 }}
                 className="absolute -bottom-4 -left-4 glass-card px-4 py-2 rounded-xl"
               >
-                <p className="text-sm font-medium text-accent">10TB+ Data Processed</p>
+                <p className="text-sm font-medium text-accent">Dean's List</p>
               </motion.div>
             </motion.div>
           </div>
@@ -102,8 +102,8 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
             >
-              Transforming Data Into{' '}
-              <span className="gradient-text">Impact</span>
+              Turning Data Into{' '}
+              <span className="gradient-text">Intelligence</span>
             </motion.h2>
 
             <motion.p
@@ -112,21 +112,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-muted-foreground text-lg mb-8 leading-relaxed"
             >
-              I'm a passionate Data Engineer with expertise in building scalable data infrastructure 
-              and real-time analytics systems. My journey started with a curiosity for how data 
-              shapes decisions, and has evolved into crafting end-to-end data solutions that 
-              power business intelligence.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-muted-foreground mb-10 leading-relaxed"
-            >
-              I thrive on solving complex problems, whether it's optimizing a slow pipeline, 
-              architecting a data lake, or building real-time dashboards that drive immediate action. 
-              My approach combines technical excellence with a deep understanding of business needs.
+              I’m a Computer Science student at IBA Karachi with a strong interest in Artificial Intelligence, Machine Learning, and Data Science. I enjoy working with data to build intelligent systems, from analyzing complex datasets and processing natural language to developing applications that turn AI ideas into real-world solutions. My goal is to use data-driven insights and machine learning to create meaningful and practical impact.
             </motion.p>
 
             {/* Highlights Grid */}

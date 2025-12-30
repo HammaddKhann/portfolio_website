@@ -13,12 +13,12 @@ const Footer = () => {
             whileHover={{ scale: 1.05 }}
             className="text-xl font-bold gradient-text"
           >
-            {'<Dev />'}
+            {'MHK'}
           </motion.a>
 
           <div className="flex items-center gap-6">
             <motion.a
-              href="https://github.com"
+              href="https://github.com/HammaddKhann"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
@@ -27,7 +27,7 @@ const Footer = () => {
               <Github size={20} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/muhammad-hammad-khan-739950279/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
@@ -36,7 +36,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </motion.a>
             <motion.a
-              href="mailto:hello@example.com"
+              href="hammadalam021@gmail.com"
               whileHover={{ scale: 1.1, y: -2 }}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
@@ -44,9 +44,6 @@ const Footer = () => {
             </motion.a>
           </div>
 
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Built with <Heart size={14} className="text-red-500" /> © {currentYear}
-          </p>
         </div>
       </div>
     </footer>

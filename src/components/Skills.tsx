@@ -2,34 +2,39 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const technicalSkills = [
-  { name: 'Data Pipeline Development', level: 95 },
-  { name: 'ETL/ELT Processes', level: 90 },
-  { name: 'Real-Time Stream Processing', level: 88 },
-  { name: 'Data Modeling & Warehousing', level: 92 },
-  { name: 'Cloud Infrastructure (AWS/GCP)', level: 85 },
-  { name: 'SQL & NoSQL Databases', level: 93 },
+  { name: 'Machine Learning & AI', level: 90 },
+  { name: 'Data Processing & Analytics', level: 88 },
+  { name: 'Web Development', level: 85 },
+  { name: 'MLOps & DevOps', level: 83 },
+  { name: 'Database Systems', level: 87 },
+  { name: 'Cloud Computing', level: 80 },
 ];
 
 const analyticalSkills = [
   'System Design',
-  'Problem Decomposition',
-  'Performance Optimization',
-  'Data Quality Assurance',
-  'Technical Documentation',
-  'Agile Methodologies',
+  'Problem Solving',
+  'Data Analysis',
+  'Feature Engineering',
+  'Model Optimization',
+  'Algorithm Design',
 ];
 
 const tools = [
-  'VS Code',
-  'DataGrip',
+  'Python',
+  'PyTorch',
+  'TensorFlow',
+  'React',
+  'Next.js',
+  'Docker',
+  'Spark',
+  'Hadoop',
+  'PostgreSQL',
+  'MongoDB',
+  'AWS',
+  'Git',
   'Jupyter',
-  'Postman',
-  'Grafana',
-  'Confluence',
-  'Jira',
-  'Slack',
-  'Notion',
-  'Figma',
+  'VS Code',
+  'Linux',
 ];
 
 const Skills = () => {
@@ -53,8 +58,8 @@ const Skills = () => {
             Skills & <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A blend of technical mastery and analytical thinking 
-            to deliver exceptional data solutions.
+            A blend of technical mastery and analytical thinking
+            to deliver exceptional solutions.
           </p>
         </motion.div>
 
@@ -130,7 +135,7 @@ const Skills = () => {
             >
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full" />
-                Tools & Platforms
+                Tools & Technologies
               </h3>
 
               <div className="flex flex-wrap gap-2">
