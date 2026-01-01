@@ -40,7 +40,7 @@ const Extracurriculars = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-20 md:py-32 relative">
+    <section id="extracurriculars" className="py-20 md:py-32 relative">
       <div className="section-container">
         <motion.div
           ref={ref}

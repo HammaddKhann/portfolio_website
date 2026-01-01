@@ -104,19 +104,6 @@ const Hero = () => {
             View Projects
             <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform" />
           </motion.a>
-
-          <motion.a
-            href="/resume.pdf"
-            download
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group flex items-center gap-2 px-8 py-4 text-base font-semibold 
-                       bg-secondary/50 border border-border text-foreground rounded-full 
-                       hover:bg-secondary hover:border-primary/50 transition-all duration-300"
-          >
-            <Download size={18} className="group-hover:-translate-y-1 transition-transform" />
-            Download Resume
-          </motion.a>
         </motion.div>
 
         {/* Scroll Indicator */}
